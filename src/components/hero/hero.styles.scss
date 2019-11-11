@@ -6,3 +6,33 @@
     margin-top: 70.56px;
 
 }
+
+.my-card{
+    border-radius: 0%;
+    .house-title{
+        .house-status{
+            margin-left: 20px;
+            font-size: 1.3rem;
+        }
+    }
+}
+
+.hero-details{
+    
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    .hero-subtitle{
+
+        display: inline;
+    }
+    span{
+        font-size: 1.5rem;
+        margin: 10px 10px 10px 0;
+    }
+}
+
+.location-marker{
+    margin-left: 5px;
+}
