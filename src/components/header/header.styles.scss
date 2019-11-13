@@ -6,10 +6,19 @@
     .logo{
         width: 13rem;
     }
+
+    .ml-auto{
+        .nav-link{
+            padding: 8px 15px;
+            color: #443737;
+        }
+    }
     
     @media screen and (min-width: 592px) {
         padding-left: 12.6rem;
         padding-right: 12.6rem;
     }
+
+    
 }
 

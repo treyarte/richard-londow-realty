@@ -15,13 +15,15 @@ const Header = () => {
                 <Nav className="ml-auto">
                     <Nav.Link href="#home">Properties</Nav.Link>
                     <Nav.Link href="#link">Categories</Nav.Link>
+                    <Nav.Link href="#link">About</Nav.Link>
+                    <Nav.Link href="#link">Contact</Nav.Link>
                     <Nav.Link href="#link">Sign In</Nav.Link>
-                    <NavDropdown title="My Account" id="basic-nav-dropdown">
+                    {/* <NavDropdown title="My Account" id="basic-nav-dropdown">
                         <NavDropdown.Item href="#action/3.1">Favorites</NavDropdown.Item>
                         <NavDropdown.Item href="#action/3.2">Messages</NavDropdown.Item>
                         <NavDropdown.Divider />
                         <NavDropdown.Item href="#action/3.4">Sign Out</NavDropdown.Item>
-                    </NavDropdown>
+                    </NavDropdown> */}
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
