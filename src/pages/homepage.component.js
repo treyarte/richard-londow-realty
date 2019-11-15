@@ -1,13 +1,14 @@
 import React from "react";
-import Carousel from "react-bootstrap/Carousel";
+import MyCarousel from "../components/carousel/carousel.component";
 import Hero from "../components/hero/hero.component";
 import {firestore, convertCollectionsSnapshotToMap} from "../firebase/firebase.utils";
 import {connect} from "react-redux";
 import {updateProperties} from "../redux/properties/properties.actions";
 import withSpinner from "../components/with-spinner/with-spinner.component"
-import propertiesReducer from "../redux/properties/properties.reducer";
 
-const PropertiesWithSpinner = withSpinner(Hero);
+
+
+const PropertiesWithSpinner = withSpinner(MyCarousel);
 
 class Homepage extends React.Component {
     state = {
@@ -26,27 +27,17 @@ class Homepage extends React.Component {
             this.setState({loading: false});
             
         });
-
+        
     }
     render() {
+
         const {loading} = this.state;
         return (
-            <Carousel>
-                <Carousel.Item>
-                    <PropertiesWithSpinner  isLoading={loading}/>
-                </Carousel.Item>
-
-                {/* <Carousel.Item>
-                    <Hero2/>
-                </Carousel.Item>
-
-                <Carousel.Item>
-                    <Hero3/>
-                </Carousel.Item> */}
-            </Carousel>
+            <PropertiesWithSpinner isLoading={loading}/>
         )
     }
 }
+
 
 const mapDispatchToProps = dispatch => ({
     updateProperties: propertiesMap => dispatch(updateProperties(propertiesMap))

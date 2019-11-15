@@ -4,13 +4,21 @@ import Homepage from "./pages/homepage.component";
 
 import './App.css';
 
-function App() {
-  return (
-    <div >
-      <Header></Header>
-      <Homepage></Homepage>
-    </div>
-  );
+
+class App extends React.Component {
+ 
+
+  render(){
+    
+
+    return (
+      <div >
+        <Header></Header>
+        <Homepage></Homepage>
+      </div>
+    );
+  }
 }
+
 
 export default App;

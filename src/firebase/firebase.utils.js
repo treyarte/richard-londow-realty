@@ -38,3 +38,15 @@ export const convertCollectionsSnapshotToMap = (collections) =>{
     //     return accumulator;
     // }, {});
 }
+
+export const addCollectionAndDocuments = async (collectionKey, objectToAdd) => {
+    const collectionRef = firestore.collection(collectionKey);
+    console.log(collectionRef)
+
+    const batch = firestore.batch();
+    objectToAdd.forEach(obj=> {
+        const newDocRef = collectionRef.doc();
+        batch.set(newDocRef, obj);
+    });
+   return await batch.commit();
+}
