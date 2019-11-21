@@ -1,6 +1,8 @@
 import React from "react";
 import MyCarousel from "../components/carousel/carousel.component";
 import Hero from "../components/hero/hero.component";
+import HeroBanner from "../components/hero-banner/hero-banner.component";
+import Search from "../components/search/search.component"
 import {firestore, convertCollectionsSnapshotToMap} from "../firebase/firebase.utils";
 import {connect} from "react-redux";
 import {updateProperties} from "../redux/properties/properties.actions";
@@ -32,8 +34,11 @@ class Homepage extends React.Component {
     render() {
 
         const {loading} = this.state;
+        {/* <PropertiesWithSpinner isLoading={loading}/> */}
         return (
-            <PropertiesWithSpinner isLoading={loading}/>
+            <HeroBanner/>
+
+            
         )
     }
 }

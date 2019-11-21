@@ -5,6 +5,7 @@
 
     .logo{
         width: 13rem;
+        display: block;
     }
 
     .ml-auto{
@@ -14,10 +15,7 @@
         }
     }
     
-    @media screen and (min-width: 592px) {
-        padding-left: 12.6rem;
-        padding-right: 12.6rem;
-    }
+
 
     
 }

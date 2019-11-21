@@ -4,3 +4,10 @@ html{
     font-family: "Open Sans", sans-serif;
     font-family: "Roboto", sans-serif;
 }
+
+
+@media screen and (min-width: 989px) {
+    html{
+       
+    }
+}
