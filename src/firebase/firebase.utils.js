@@ -19,7 +19,7 @@ export const firestore = firebase.firestore();
 
 export const convertCollectionsSnapshotToMap = (collections) =>{
     const transformedCollection = collections.docs.map(doc =>{
-        const {address, imageUrls, rooms, title, status, size} = doc.data();
+        const {address, imageUrls, rooms, title, status, size, garage, price} = doc.data();
         return {
             routeName: encodeURI(title.toLowerCase()),
             id: doc.id,
@@ -28,7 +28,9 @@ export const convertCollectionsSnapshotToMap = (collections) =>{
             rooms,
             title,
             status,
-            size
+            size,
+            garage,
+            price
         }
     });
 

@@ -2,12 +2,12 @@ import React from "react";
 import MyCarousel from "../components/carousel/carousel.component";
 import Hero from "../components/hero/hero.component";
 import HeroBanner from "../components/hero-banner/hero-banner.component";
-import Search from "../components/search/search.component"
+
 import {firestore, convertCollectionsSnapshotToMap} from "../firebase/firebase.utils";
 import {connect} from "react-redux";
 import {updateProperties} from "../redux/properties/properties.actions";
 import withSpinner from "../components/with-spinner/with-spinner.component"
-
+import "./homepage.styles.scss";
 
 
 const PropertiesWithSpinner = withSpinner(MyCarousel);
@@ -34,9 +34,17 @@ class Homepage extends React.Component {
     render() {
 
         const {loading} = this.state;
-        {/* <PropertiesWithSpinner isLoading={loading}/> */}
+       
         return (
-            <HeroBanner/>
+            <div>
+                <HeroBanner/>
+                <div className=" section-header">
+                    <h2>Featured Properties</h2>
+                </div>
+                
+                <PropertiesWithSpinner isLoading={loading}/>
+            </div>
+             
 
             
         )

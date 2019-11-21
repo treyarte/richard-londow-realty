@@ -14,7 +14,7 @@ const Search = () =>{
                     </div>
                     <div className="col-lg-6">
                         <select className="form-control" name="status" id="property-status">
-                            <option value="sell" selected disabled>Property Status</option>
+                            <option  defaultValue="Property Status" disabled>Property Status</option>
                             <option value="rent">Rent</option>
                             <option value="sold">Sold</option>
                             <option value="sell">Sell</option>
@@ -22,7 +22,7 @@ const Search = () =>{
                     </div>
                     <div className="col-lg-4">
                         <select name="category" id="property-category" className="form-control">
-                            <option value="residential" selected disabled>Category</option>
+                            <option defaultValue="Category" disabled>Category</option>
                             <option value="residential">Residential</option>
                             <option value="commercial">Commercial</option>
                             <option value="land">Land</option>
@@ -31,7 +31,7 @@ const Search = () =>{
                     </div>
                     <div className="col-lg-4">
                         <select name="category" id="property-bedroom" className="form-control">
-                                <option value="1" selected disabled>Bedroom</option>
+                                <option defaultValue="Bedroom" disabled>Bedroom</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -46,7 +46,7 @@ const Search = () =>{
                     </div>
                     <div className="col-lg-4">
                         <select name="category" id="property-bathroom" className="form-control">
-                                    <option value="1" selected disabled>Bathroom</option>
+                                    <option defaultValue="Bathroom" disabled>Bathroom</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -61,7 +61,7 @@ const Search = () =>{
                     </div>
                     <div className="col-lg-6">
                         <select name="category" id="property-category" className="form-control">
-                            <option value="0" selected disabled>Min Price</option>
+                            <option  defaultValue="Min Price" disabled>Min Price</option>
                             <option value="0">0</option>
                             <option value="1000">1000</option>
                             <option value="2000">2000</option>
@@ -71,7 +71,7 @@ const Search = () =>{
                     </div>
                     <div className="col-lg-6">
                         <select name="category" id="property-category" className="form-control">
-                            <option value="10000" selected disabled>Max Price</option>
+                            <option  defaultValue="Max Price" disabled>Max Price</option>
                             <option value="5000">5000</option>
                             <option value="6000">6000</option>
                             <option value="7000">7000</option>
@@ -86,7 +86,6 @@ const Search = () =>{
                 </div>
             </form>
         </div>
-        
     )
 }
 

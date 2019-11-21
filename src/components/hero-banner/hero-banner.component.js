@@ -6,7 +6,7 @@ const HeroBanner = () => {
         
     return (
     
-    <div class="hero-banner-container">
+    <div className="hero-banner-container">
         <div className="hero-banner-content container"> 
                 <Search/>
         </div>
