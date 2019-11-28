@@ -29,7 +29,7 @@ const FeaturedProperty = ({property}) =>{
                         <p><span className="fas fa-bed"></span> {rooms.bedroom} Bedrooms</p>
                     </div>
                     <div className="col-lg-6 col-sm-6 col-6">
-                        <p><span className="fas fa-bath"></span> {rooms.bathroom} BathRooms</p>
+                        <p><span className="fas fa-bath"></span> {rooms.bathroom} Bathrooms</p>
                     </div>
                     <div className="col-lg-6 col-sm-6 col-6">
                         <p><span className="fas fa-vector-square"></span> {size} sqft</p>

@@ -1,11 +1,11 @@
 import React from "react";
 import MyCarousel from "../components/carousel/carousel.component";
-import Hero from "../components/hero/hero.component";
 import HeroBanner from "../components/hero-banner/hero-banner.component";
-
 import {firestore, convertCollectionsSnapshotToMap} from "../firebase/firebase.utils";
 import {connect} from "react-redux";
 import {updateProperties} from "../redux/properties/properties.actions";
+import Category from "../components/category/category.component";
+import PropertySection from "../components/property-section/property-section.component";
 import withSpinner from "../components/with-spinner/with-spinner.component"
 import "./homepage.styles.scss";
 
@@ -43,6 +43,15 @@ class Homepage extends React.Component {
                 </div>
                 
                 <PropertiesWithSpinner isLoading={loading}/>
+                <div className="section-header">
+                    <h2>Categories</h2>
+                </div>
+                <Category/>
+
+                <div className="section-header">
+                    <h2>Browse Properties</h2>
+                </div>
+                <PropertySection/>
             </div>
              
 
