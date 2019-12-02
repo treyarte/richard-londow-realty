@@ -1,25 +1,26 @@
 import React from "react";
 import Property from "../property/property.component";
 import "./property-section.styles.scss";
+import {connect} from "react-redux";
 
-const PropertySection = () => {
-     {/* <div className="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <Property/>
-                </div>
-                <div class="col-lg-4">
-                    <Property/>
-                </div>
-                <div class="col-lg-4">
-                    <Property/>
-                </div>
-            </div>
-        </div> */}
+const PropertySection = ({properties}) => {
     return (
-       
-        <Property/>
+        <div className="property-container">
+            <div className="row">
+            {
+                properties.filter((property, index) => index < 10).map( (property) => (
+                <div className="col-lg-4 col-md-6 col-sm-12 property-item-container">
+                    <Property property= {property}/>
+                </div>
+                ))
+            }
+            </div>
+        </div>
     )
 }
 
-export default PropertySection;
+const mapStateToProps = state => ({
+    properties: state.properties.collections 
+})
+
+export default connect(mapStateToProps)(PropertySection);

@@ -10,7 +10,8 @@ import withSpinner from "../components/with-spinner/with-spinner.component"
 import "./homepage.styles.scss";
 
 
-const PropertiesWithSpinner = withSpinner(MyCarousel);
+const FeaturedPropertiesWithSpinner = withSpinner(MyCarousel);
+const PropertiesWithSpinner = withSpinner(PropertySection);
 
 class Homepage extends React.Component {
     state = {
@@ -31,10 +32,14 @@ class Homepage extends React.Component {
         });
         
     }
+
+    componentWillUnmount(){
+        this.unsubscribeFromSnapshot()
+    }
+
     render() {
 
-        const {loading} = this.state;
-       
+        const {loading} = this.state;      
         return (
             <div>
                 <HeroBanner/>
@@ -42,20 +47,20 @@ class Homepage extends React.Component {
                     <h2>Featured Properties</h2>
                 </div>
                 
-                <PropertiesWithSpinner isLoading={loading}/>
+                <FeaturedPropertiesWithSpinner isLoading={loading}/>
+
                 <div className="section-header">
                     <h2>Categories</h2>
                 </div>
+
                 <Category/>
 
                 <div className="section-header">
                     <h2>Browse Properties</h2>
                 </div>
-                <PropertySection/>
-            </div>
-             
 
-            
+                <PropertiesWithSpinner isLoading={loading}/>
+            </div>  
         )
     }
 }

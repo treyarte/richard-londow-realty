@@ -1,0 +1,46 @@
+.footer{
+    
+    background-color: #dfd3d3;
+
+    .footer-content{
+        width: 80%;
+        margin: auto;
+
+        .footer-section{
+            padding-top: 30px;
+            
+
+            img{
+                width: 300px;
+                display: block;
+                margin-right: 60px;
+            }
+
+            ul{
+                list-style: none;
+                padding: 0;
+                li{
+                    margin-bottom: 10px;
+                }
+            }
+
+            .social-links{
+                font-size: 30px;
+                margin-right: 10px
+            }
+        }
+        
+    }
+}
+
+.divider{
+    margin: 12px;
+    display: block;
+    border-top: 1px  solid #b8b0b0;
+    width: 100%;
+}
+
+.copyright{
+    width: 100%;;
+    text-align: center;
+}

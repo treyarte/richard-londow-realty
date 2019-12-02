@@ -1,8 +1,6 @@
 import React from "react"
-import Button from "react-bootstrap/Button";
 import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
-import NavDropdown from "react-bootstrap/NavDropdown";                
+import Nav from "react-bootstrap/Nav";             
 import logo from "../../assets/Richard_new_logo_cropped.png";
 import "./header.styles.scss";
 const Header = () => {
